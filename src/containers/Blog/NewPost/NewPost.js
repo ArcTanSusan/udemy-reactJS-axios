@@ -8,6 +8,13 @@ class NewPost extends Component {
         content: '',
         author: 'Max'
     }
+
+    componentDidMount() {
+      // Used for side effects. Triggers a re-render.
+      console.log("[NewPost.js] componentDidMount")
+      console.log(this.props);
+    }
+
     postDataHandler = () => {
       const data = {
         title: this.state.title,
